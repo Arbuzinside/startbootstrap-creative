@@ -336,8 +336,56 @@ header .header-content .header-content-inner p {
 .service-box p {
     margin-bottom: 0;
 }
-
 .portfolio-box {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+
+
+}
+
+
+.portfolio-box-festival {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+
+}
+
+
+.portfolio-box-bachelor {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+
+}
+
+.portfolio-box-weekend {
+    background-color: rgba(22, 163, 220, 0.5)
+
+}
+
+.portfolio-box-organization {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+
+}
+
+.portfolio-box-surfing {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+
+}
+
+
+.portfolio-box-skiing {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -390,7 +438,7 @@ header .header-content .header-content-inner p {
 
 @media(min-width:768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
