@@ -263,6 +263,9 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-style: cover;
+    
+
 }
 
 header .header-content {
@@ -285,9 +288,9 @@ header .header-content .header-content-inner hr {
 
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(255,255,255,.7);
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
 }
 
 @media(min-width:768px) {
