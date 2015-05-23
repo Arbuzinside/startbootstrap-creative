@@ -33,6 +33,22 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $('#submit').click(function(){
+
+                    $.post("welcome.php", $("#mycontactform").serialize(),  function(response) {
+                        $('#success').html(response);
+                            //$('#success').hide('slow');
+                    });
+                    return false;
+
+                });
+
+            });
+        </script>
     <![endif]-->
 
 </head>
@@ -351,9 +367,10 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
 
 
-                    <form name="emailform" action="#" onsubmit="return validateForm()" method="post">
-                        E-mail: <input type="text" name="email">
+                    <form action="" method="post" id="mycontactform" >
+                        E-mail: <input type="text" name="email" id="email">
                         <input type="submit" id="submit">
+                        <div id="success" style="color:red;"></div>
                         <br>
 
                     </form>
@@ -372,22 +389,7 @@
     </section>
 
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
-        $(document).ready(function(){
 
-            $('#submit').click(function(){
-
-                $.post("welcome.php", $("#emailform").serialize(),  function(response) {
-                    $('#success').html(response);
-                    //$('#success').hide('slow');
-                });
-                return false;
-
-            });
-
-        });
-    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

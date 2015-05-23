@@ -1,11 +1,10 @@
 // Here we get all the information from the fields sent over by the form.
 
 $email = $_POST['email'];
-
 $name = 'New user';
 $message = 'One more click on your website';
  
-$to = 'moneyjar@moneyjar.ml';
+$to = 'arbuzinside@gmail.com';
 $subject = 'Woop! New costumer interested!';
 $message = 'FROM: '.$name.' Email: '.$email.'Message: '.$message;
 $headers = 'From: moneyjarl@moneyjar.ml' . "\r\n";
