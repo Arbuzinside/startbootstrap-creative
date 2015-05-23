@@ -64,8 +64,12 @@
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#vid">How it works</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#portfolio">Best for</a>
                     </li>
+
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
@@ -79,9 +83,9 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Enjoy your most memorable moments</h1>
+                <h1>Need to collect group money?</h1>
                 <hr>
-                <p>Organize the most awesome events of your life with the help of our service. </p>
+                <p>Make chasing participants a thing of the past. </p>
                 <a href="#services" class="btn btn-primary btn-xl page-scroll">Check it out</a>
             </div>
         </div>
@@ -91,7 +95,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Whole event in one place</h2>
+                    <h2 class="section-heading">Keep everything in one place</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -101,29 +105,29 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Create an event</h3>
-                        <p class="text-muted">It can be anything: from simple B-day party of your flatmate to unbelievable adventure in Amsterdam.</p>
+                        <h3>Easy & simple</h3>
+                        <p class="text-muted">Effortlessly set up the event and invite participants by email.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Invite friends</h3>
-                        <p class="text-muted">Invite all the people participating in the event so you can make it together.</p>
+                        <i class="fa fa-4x fa-lock wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Trusted & secure</h3>
+                        <p class="text-muted">Connect your bank account to collect payments in few clicks. Payments are powered and protected by <a href="http://www.paytrail.com/">Paytrail</a>.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x  fa-comments-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Plan together</h3>
-                        <p class="text-muted">You can plan all your major expenses like accommodation booking, flight tickets, car rental.</p>
+                        <i class="fa fa-4x  fa-bell wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Stress-free & non-intrusive</h3>
+                        <p class="text-muted">Automatically send personalised and discreet reminders to people who haven't paid.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-money wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Collect & Pay</h3>
-                        <p class="text-muted">Collect money and pay for everything in an easy way </p>
+                        <i class="fa fa-4x fa-clock-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Time-saving</h3>
+                        <p class="text-muted">Keep everything in one place: Participants, , contacts and deadlines.</p>
                     </div>
                 </div>
             </div>
@@ -132,7 +136,7 @@
 
 
 
-    <section class="vid" id="video">
+    <section class="vid" id="vid">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -356,15 +360,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
 
 
-                    <form action="" method="post" id="mycontactform" >
-                        <label for="name">Name:</label><br />
-                        <input type="text" name="name" id="name" /><br />
-                        <label for="email">Email:</label><br />
-                        <input type="text" name="email" id="email" /><br />
-                        <label for="message">Message:</label><br />
-                        <textarea name="message" id="message"></textarea><br />
-                        <input type="button" value="send" id="submit" /><div id="success" style="color:red;"></div>
-                    </form>
+                    Please email to us!
 
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
@@ -384,7 +380,6 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -394,22 +389,7 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
 
-            $('#submit').click(function(){
-
-                $.post("send.php", $("#mycontactform").serialize(),  function(response) {
-                    $('#success').html(response);
-                    //$('#success').hide('slow');
-                });
-                return false;
-
-
-            });
-
-        });
-    </script>
 
 
 

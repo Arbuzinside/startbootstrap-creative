@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MoneyJar: create, plan, enjoy ">
+    <meta name="author" content="MoneyJar Inc.">
+    <meta property="og:title" content="MoneyJar: create, plan, pay, enjoy" />
+    <meta property="og:description" content="The most promissing service of 2015 is coming soon..." />
+    <meta name="google-site-verification" content="igU5yFymgXFlHcaUzZ8h8gLWqFDC3EkkKR-mImVae4M" />
+
+    <title>MoneyJar: create, plan, enjoy</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <link href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            padding-top: 60px;
+        }
+        @media (max-width: 979px) {
+            body {
+                padding-top: 0px;
+            }
+        }
+        #main_content {
+            background: #fff none repeat scroll 0 0;
+            clear: both;
+            overflow: hidden;
+            padding: 50px 0 0;
+            position: relative;
+        }
+
+        .no-margin {
+            margin: 0;
+        }
+
+        /* sidenav */
+
+        ul.app-nav {
+            list-style: outside none none;
+            margin: 0 0 40px;
+            padding: 0;
+        }
+
+        ul.app-nav li a {
+            color: #7ec172;
+        }
+
+        ul.app-nav li {
+            display: block;
+            font-weight: 600;
+            height: 39px;
+            line-height: 40px;
+            list-style: outside none none;
+        }
+
+        ul.app-nav li.title {
+            color: #b3bccd;
+            font-size: 10px;
+            font-weight: 700;
+            padding-left: 0;
+            text-transform: uppercase;
+        }
+
+        ul.app-nav li.active a{
+            color: #498a6d;
+            text-decoration: underline;
+        }
+
+        div.event-partecipations {
+            margin-top:20px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        div.partecipations {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .deadline{
+            color: #ce4844;
+            font-size: 16px;
+        }
+
+        div.more{
+            text-align: center;
+            margin-top: 65px;
+        }
+
+        span.more-sign {
+            font-size: 30px;
+        }
+
+        .list-group-item:hover{
+            background-color:#eaeaea;
+            cursor: pointer;
+        }
+
+        //navbar
+        nav#mainNav  {
+            background: #fff none repeat scroll 0 0;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-default {
+            background-color: #fafafa;
+            line-height: 70px;
+            min-height:70px;
+            vertical-align:center;
+        }
+
+        .navbar-default  ul li {
+            margin-top:13px;
+        }
+
+
+        .navbar-default  ul li a {
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .custom-button {
+            background-color: #7ec172;
+            color: #fff;
+            border-width: 0;
+        }
+
+        .custom-button:hover {
+            background-color: #498a6d;
+            border-width: 0;
+        }
+
+        .lastcontent {
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+
+        .custom-button:focus {
+            background-color: #498a6d;
+             border-width: 0;
+        }
+    </style>
+
+    <script >
+        $(document).ready(function() {
+            $('#payments').dataTable();
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top" style="padding:0px;">
+                    <img src="img/moneyjar-small-logo.png" alt="MoneyJar">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#services">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll active" href="#portfolio">Events</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Log out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" id="main_content">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a class="thumbnail no-margin" href="#">
+                            <img src="img/soccer.png" alt="team picture" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-lg-8">
+                        <h4>Fabio</h4>
+                        <p>SuperSoccer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <h3>Event details</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="main_content">
+        <div class="row">
+            <div class="col-sm-3">
+
+                <ul class="app-nav">
+                    <li class="title">Events</li>
+
+                    <li class="">
+                        <a href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Overview</a>
+                    </li>
+
+                    <li class="">
+                        <a href="#"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Previous events</a>
+                    </li>
+                </ul>
+
+                <ul class="app-nav">
+                    <li class="title">Settings</li>
+
+                    <li class="">
+                        <a href="#"><span class="glyphicon glyphicon-glass" aria-hidden="true"></span> Team</a>
+                    </li>
+
+                    <li class="">
+                        <a href="#"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> Bank account</a>
+                    </li>
+
+                    <li class="">
+                        <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
+                <div class="col-sm-12">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <a class="thumbnail no-margin" href="#">
+                                        <img src="img/square-footbal.jpg" alt="team picture" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <h3>Vantaa cup - 13/07/2015</h3>
+                                            <p class="deadline">Payment deadline: 01/06/2015</p>
+                                        </div>
+                                    </div>
+                                    <div class="row event-partecipations">
+                                        <div class="col-lg-offset-1 col-lg-10 text-center">
+                                            <div class="col-lg-4">
+                                                <div class="row partecipations">
+                                                    17
+                                                </div>
+                                                <div class="row">
+                                                    Going
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="row partecipations">
+                                                    13
+                                                </div>
+                                                <div class="row">
+                                                    Paid
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="row partecipations">
+                                                    20
+                                                </div>
+                                                <div class="row">
+                                                    Invited
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-12">
+                    <table id="payments" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Participant</th>
+                                <th>Status</th>
+                                <th>Request</th>
+                                <th>Amount</th>
+                                <th>Payment date</th>
+                                <th>Reminders</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>kimi.rossi@gmail.com</td>
+                                <td>confirmed</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>heiky.hakinen@gmail.com</td>
+                                <td>paid</td>
+                                <td>-</td>
+                                <td>130 €</td>
+                                <td>23/05/2015</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>reijo.poutianen@gmail.com</td>
+                                <td>paid</td>
+                                <td>-</td>
+                                <td>130 €</td>
+                                <td>22/05/2015</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>kaarlo.soderstorm@gmail.com</td>
+                                <td>paid</td>
+                                <td>-</td>
+                                <td>130 €</td>
+                                <td>21/05/2015</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>emma.berglund@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>henna.hull@gmail.com</td>
+                                <td>confirmed</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>arto.simda@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>sirpa.niinisto@gmail.com</td>
+                                <td>confirmed</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>jury.lehtonen@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>sini.suomi@gmail.com</td>
+                                <td>confirmed</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>carda.paanen@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>nils.tuomi@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>eija.jokinen@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>hessu.laiko@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>anssi.kulmala@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>reeta.nikkola@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                            <tr>
+                                <td>elisa.virtanen@gmail.com</td>
+                                <td>pending</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a class="btn custom-button">Remind</a></td>
+                            </tr>
+                        <tbody>
+                    <table>
+                </div>
+
+                <div class="row lastcontent">
+                    <div class="col-sm-offset-2 col-sm-8">
+                        <a href="#" class="btn btn-lg btn-primary btn-block custom-button" id="create event">Remind all</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
