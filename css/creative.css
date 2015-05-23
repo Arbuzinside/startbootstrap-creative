@@ -55,6 +55,14 @@ p {
     background-color: #f05f40;
 }
 
+
+.vid {
+    background-color: #343f48;
+
+}
+
+
+
 .create {
     background-image: url("../img/1.jpg");
     min-height: 33%;
@@ -65,8 +73,14 @@ p {
     -o-background-size: cover
 
 
-    -
+
 }
+
+
+
+
+
+
 
 .get {
     background-image: url("../img/2.JPG");
