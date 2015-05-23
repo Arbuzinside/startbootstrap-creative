@@ -1,4 +1,7 @@
-// Here we get all the information from the fields sent over by the form.
+
+
+
+<?php // Here we get all the information from the fields sent over by the form.
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
@@ -14,3 +17,5 @@ echo "Your email was sent!"; // success message
 }else{
 echo "Invalid Email, please provide an correct email.";
 }
+
+?>
