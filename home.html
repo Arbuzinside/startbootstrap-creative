@@ -29,25 +29,6 @@
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
 
-
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
-        $(document).ready(function(){
-
-            $('#submit').click(function(){
-
-                $.post("welcome.php", $("#mycontactform").serialize(),  function(response) {
-                    $('#success').html(response);
-                    //$('#success').hide('slow');
-                });
-                return false;
-
-
-            });
-
-        });
-    </script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,6 +36,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
     <![endif]-->
+
+
+
 
 </head>
 
@@ -400,6 +384,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -408,6 +393,25 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#submit').click(function(){
+
+                $.post("send.php", $("#mycontactform").serialize(),  function(response) {
+                    $('#success').html(response);
+                    //$('#success').hide('slow');
+                });
+                return false;
+
+
+            });
+
+        });
+    </script>
+
+
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
