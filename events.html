@@ -11,7 +11,7 @@
     <meta property="og:title" content="MoneyJar: create, plan, pay, enjoy" />
     <meta property="og:description" content="The most promissing service of 2015 is coming soon..." />
     <meta name="google-site-verification" content="igU5yFymgXFlHcaUzZ8h8gLWqFDC3EkkKR-mImVae4M" />
-
+    <link rel="shortcut icon" href="favicon.ico">
     <title>MoneyJar: create, plan, enjoy</title>
 
     <!-- Bootstrap Core CSS -->
@@ -144,6 +144,11 @@
             background-color: #498a6d;
              border-width: 0;
         }
+
+        .lastcontent {
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
     </style>
 </head>
 
@@ -159,7 +164,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top" style="padding:0px;">
+                <a class="navbar-brand page-scroll" href="home.html" style="padding:0px;">
                     <img src="img/moneyjar-small-logo.png" alt="MoneyJar">
                 </a>
             </div>
@@ -168,13 +173,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#services">Home</a>
+                        <a class="page-scroll" href="events.html">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll active" href="#portfolio">Events</a>
+                        <a class="page-scroll active" href="events.html">Events</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Log out</a>
+                        <a class="page-scroll" href="home.html">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -240,9 +245,9 @@
                 <div class="col-sm-12">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <div class="row">
+                            <div class="row" onclick="location.href='details.html';" style="cursor:pointer;">
                                 <div class="col-lg-3">
-                                    <a class="thumbnail no-margin" href="#">
+                                    <a class="thumbnail no-margin" href="details.html">
                                         <img src="img/square-footbal.jpg" alt="team picture" class="img-responsive">
                                     </a>
                                 </div>
@@ -282,16 +287,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-1 more">
+                                <div class="col-lg-1 more" href="details.html">
                                     <span class="glyphicon glyphicon-chevron-right more-sign" aria-hidden="true"></span>
                                     <p>Details</p>
                                 </div>
                             </div>
                         </li>
-<li class="list-group-item">
-                            <div class="row">
+                        <li class="list-group-item">
+                            <div class="row" onclick="location.href='details.html';" style="cursor:pointer;">
                                 <div class="col-lg-3">
-                                    <a class="thumbnail no-margin" href="#">
+                                    <a class="thumbnail no-margin" href="details.html">
                                         <img src="img/dinner.jpg" alt="team picture" class="img-responsive">
                                     </a>
                                 </div>
@@ -340,7 +345,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-offset-2 col-sm-8">
-                    <a href="#" class="btn btn-lg btn-primary btn-block custom-button" id="create event">Create new event</a>
+                    <a href="create-event.html" class="btn btn-lg btn-primary btn-block custom-button lastcontent" id="create event">Create new event</a>
                 </div>
             </div>
         </div>
