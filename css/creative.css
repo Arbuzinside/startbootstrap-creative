@@ -69,6 +69,13 @@ p {
 }
 
 
+.buttons {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
 
 
 
@@ -122,6 +129,8 @@ aside {
 .navbar-default .navbar-header .navbar-brand:focus {
     color: #ff4c4c;
 }
+
+
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
