@@ -98,7 +98,7 @@ aside {
 .navbar-default {
     border-color: rgba(255,255,255,.3);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    background-color: #498a6d;
+    background-color:transparent;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
